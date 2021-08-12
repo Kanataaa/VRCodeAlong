@@ -9,8 +9,33 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <a-scene>
+    <a-scene change-tree-color cursor = "rayOrigin:mouse">
+        <a-camera>
+            <a-cursor></a-cursor>
+        </a-camera>
+        
+        <a-sky src="https://live.staticflickr.com/4723/28171556989_b02fb644ec_o.jpg"></a-sky>
 
+        <a-entity position="4 1 -5">
+            <a-cylinder radius=".25" height="1" color="brown" shadow></a-cylinder>
+            <a-cone position="0 1 0" radius-bottom=".75" radius-top="0" height="1.75" color="green"></a-cone>
+        </a-entity>
+
+        <a-entity position="-3 1 -5">
+            <a-cylinder radius=".25" height="1" color="brown" shadow></a-cylinder>
+            <a-cone position="0 1 0" radius-bottom=".75" radius-top="0" height="1.75" color="green"></a-cone>
+        </a-entity>
+
+        <a-entity position="0 1 -2">
+            <a-dodecahedron color="white" radius=".5"></a-dodecahedron>
+            <a-dodecahedron cursor-listener position="0 .5 0" color="white" radius=".4"></a-dodecahedron>
+            <a-dodecahedron change-color-hover position="0 1 0" color="white" radius=".4"></a-dodecahedron>
+
+            <a-circle position = ".05 .85 1" color="black" radius =".03"></a-circle>
+            <a-circle position = "-.05 .85 1" color="black" radius =".03"></a-circle>
+        </a-entity>
+
+        
     </a-scene>
 </body>
 </html>
